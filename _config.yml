@@ -1,3 +1,19 @@
 theme: jekyll-theme-minimal
 title: Rudy's homepage
 description: Bookmark this to keep an eye on my project updates!
+
+# Optional settings
+logo: images/icon.png
+description: My personal portfolio site
+
+# Create a side navigation panel:
+show_downloads: false
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "About"
+    url: "/about"
+  - title: "Projects"
+    url: "/projects"
+  - title: "Contact"
+    url: "/contact"
