@@ -23,12 +23,12 @@
 
 /* Sidebar container */
 .sidebar {
-  position: fixed;          /* stays on screen while scrolling */
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;            /* full viewport height */
-  width: 220px;             /* adjust as you like */
-  background: #f7f7f7;      /* light gray background (matches Minimal theme) */
+  height: 100vh;
+  width: 220px;
+  background: #f7f7f7;
   border-right: 1px solid #ddd;
   padding: 1rem;
   box-sizing: border-box;
@@ -66,9 +66,8 @@
   color: #0366d6;           /* GitHub blue on hover */
 }
 
-/* Push main content to the right so it’s not covered */
-.main-content {
-  margin-left: 240px;       /* matches sidebar width + padding */
+/* Push Minimal's page content over */
+.main-content, .page-content {
+  margin-left: 240px;   /* space for sidebar */
   padding: 2rem;
-  max-width: 800px;
 }

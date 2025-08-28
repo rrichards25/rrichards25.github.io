@@ -1,26 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>{{ page.title }} | {{ site.title }}</title>
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-</head>
-<body>
-    <div class="sidebar">
-      <img src="{{ '/images/headshot.jpg' | relative_url }}" alt="Rudolph Richards">
-      <nav>
-        <ul>
-          <li><a href="{{ '/' | relative_url }}">Home</a></li>
-          <li><a href="{{ '/about' | relative_url }}">About</a></li>
-          <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
-          <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  
-    <div class="main-content">
-      {{ content }}
-    </div>
-  </body>
-  
-</html>
+---
+layout: default
+---
+
+<div class="sidebar">
+  <img src="{{ '/images/headshot.jpg' | relative_url }}" alt="Rudolph Richards">
+  <nav>
+    <ul>
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
+      <li><a href="{{ '/about' | relative_url }}">About</a></li>
+      <li><a href="{{ '/projects' | relative_url }}">Projects</a></li>
+      <li><a href="{{ '/contact' | relative_url }}">Contact</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="main-content">
+  {{ content }}
+</div>
