@@ -20,3 +20,55 @@
   margin: 5px 0;
   color: #333;
 }
+
+/* Sidebar container */
+.sidebar {
+  position: fixed;          /* stays on screen while scrolling */
+  top: 0;
+  left: 0;
+  height: 100vh;            /* full viewport height */
+  width: 220px;             /* adjust as you like */
+  background: #f7f7f7;      /* light gray background (matches Minimal theme) */
+  border-right: 1px solid #ddd;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Sidebar title/logo */
+.sidebar h2,
+.sidebar img {
+  display: block;
+  margin: 0 auto 1rem auto;
+  text-align: center;
+  max-width: 140px;
+  border-radius: 50%;       /* makes headshot circular if it’s a portrait */
+}
+
+/* Sidebar nav links */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin: 0.5rem 0;
+}
+
+.sidebar nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.sidebar nav ul li a:hover {
+  color: #0366d6;           /* GitHub blue on hover */
+}
+
+/* Push main content to the right so it’s not covered */
+.main-content {
+  margin-left: 240px;       /* matches sidebar width + padding */
+  padding: 2rem;
+  max-width: 800px;
+}

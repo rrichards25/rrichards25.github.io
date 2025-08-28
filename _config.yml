@@ -2,3 +2,13 @@ theme: jekyll-theme-minimal
 title: Rudolph Richards
 description: Electrical Engineering Student | Circuits & Systems | Creativity, Humanity, Inclusion
 logo: images/headshot.png
+
+sass:
+  style: compressed
+
+plugins:
+  - jekyll-feed
+
+# Tell Jekyll where to find your stylesheet
+include:
+  - assets
