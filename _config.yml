@@ -3,12 +3,9 @@ title: Rudolph Richards
 description: Electrical Engineering Student | Circuits & Systems | Creativity, Humanity, Inclusion
 logo: assets/images/headshot.jpg
 
-sass:
-  style: compressed
+# Social links (optional)
+github_username: your-github-username
+linkedin_username: rudolph-richards-706b6128a
 
 plugins:
   - jekyll-feed
-  - jekyll-seo-tag
-
-include:
-  - assets
