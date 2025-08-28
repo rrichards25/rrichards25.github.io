@@ -1,18 +1,4 @@
 theme: jekyll-theme-minimal
 title: Rudolph Richards
-description: Bookmark this to keep an eye on my project updates!
-
-# Optional settings
 description: Electrical Engineering Student | Circuits & Systems | Creativity, Humanity, Inclusion
-
-# Create a side navigation panel:
-show_downloads: false
-navigation:
-  - title: "Home"
-    url: "/"
-  - title: "About"
-    url: "/about"
-  - title: "Projects"
-    url: "/projects"
-  - title: "Contact"
-    url: "/contact"
+logo: images/headshot.png
