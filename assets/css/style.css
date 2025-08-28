@@ -1,73 +1,118 @@
-.sidebar {
-  float: left;
-  width: 200px;
-  padding: 10px;
-}
+/* Import the minimal theme's default styles */
+@import "{{ site.theme }}";
 
-.sidebar-logo {
-  max-width: 100%;
-  border-radius: 50%;
-}
-
-.sidebar-nav {
-  margin-top: 20px;
+/* Custom sidebar styles */
+.wrapper {
   display: flex;
-  flex-direction: column;
+  min-height: 100vh;
 }
 
-.sidebar-nav a {
-  text-decoration: none;
-  margin: 5px 0;
-  color: #333;
-}
-
-/* Sidebar container */
 .sidebar {
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 220px;
-  background: #f7f7f7;
-  border-right: 1px solid #ddd;
-  padding: 1rem;
+  background: #f8f9fa;
+  border-right: 1px solid #e1e4e8;
+  padding: 20px;
   box-sizing: border-box;
+  overflow-y: auto;
+  z-index: 100;
 }
 
-/* Sidebar title/logo */
-.sidebar h2,
-.sidebar img {
+.sidebar-logo {
   display: block;
-  margin: 0 auto 1rem auto;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #e1e4e8;
+}
+
+.sidebar h2 {
   text-align: center;
-  max-width: 140px;
-  border-radius: 50%;       /* makes headshot circular if it’s a portrait */
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #24292e;
 }
 
-/* Sidebar nav links */
-.sidebar nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.sidebar p {
+  text-align: center;
+  font-size: 12px;
+  color: #586069;
+  margin-bottom: 20px;
+  line-height: 1.4;
 }
 
-.sidebar nav ul li {
-  margin: 0.5rem 0;
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
-.sidebar nav ul li a {
+.sidebar-nav a {
+  display: block;
+  padding: 8px 12px;
   text-decoration: none;
-  color: #333;
-  font-weight: 600;
-  transition: color 0.2s ease;
+  color: #586069;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: all 0.2s ease;
 }
 
-.sidebar nav ul li a:hover {
-  color: #0366d6;           /* GitHub blue on hover */
+.sidebar-nav a:hover {
+  background-color: #f1f3f4;
+  color: #0366d6;
 }
 
-/* Push Minimal's page content over */
-.main-content, .page-content {
-  margin-left: 240px;   /* space for sidebar */
-  padding: 2rem;
+.sidebar-nav a.active {
+  background-color: #0366d6;
+  color: white;
+}
+
+/* Main content area */
+.main-content {
+  flex: 1;
+  margin-left: 220px;
+  padding: 30px 40px;
+  max-width: 900px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    height: auto;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #e1e4e8;
+  }
+  
+  .sidebar-nav {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
+/* Override any conflicting minimal theme styles */
+.main-content h1 {
+  color: #24292e;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 10px;
+}
+
+.main-content a {
+  color: #0366d6;
+}
+
+.main-content a:hover {
+  text-decoration: underline;
 }
